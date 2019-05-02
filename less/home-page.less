@@ -22,6 +22,16 @@
       }
     }
   }
+  
+  .bottom-container {
+    .bus{
+      border-radius:20px;
+      margin-top:10px;
+    }
+    .here{
+      margin-top:20px;
+    }
+  }
 
   .inverse-content {
     padding-bottom: 30px;
@@ -56,6 +66,14 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        .btn-maker(white,#0e7474);
+        font-size:17px;
+        &:hover{
+          background-color: @orange;
+          color: white;
+        }
+      }
     }
   }
 }// home
