@@ -142,9 +142,11 @@ h3,
 h4,
 h5 {
   font-family: 'Indie Flower', cursive;
+  color: #ee375c;
 }
 h1 {
   font-size: 4rem;
+  color: #17A2B8;
 }
 h2 {
   font-size: 3.2rem;
@@ -172,12 +174,28 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    background-color: white;
+    padding: 10px;
+    max-width: 500px;
+  }
+}
 .header-class {
   border-bottom: 2px dashed gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+}
+@media (max-width: 500px) {
+  .header-class {
+    border-bottom: 2px dashed gray;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+  }
 }
 .header-class nav a {
   margin: 20px;
@@ -187,10 +205,32 @@ img {
   transition: border-bottom 0.5s ease-in-out;
   font-size: 15px;
 }
-nav a:hover {
+@media (max-width: 500px) {
+  .header-class nav a {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    display: block;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+    transition: border-bottom 0.5s ease-in-out;
+  }
+}
+.header-class nav a:hover {
   text-decoration: none;
-  color: orange;
-  border-bottom: 2px solid orange;
+  color: red;
+  border-bottom: 2px solid #e0960c;
+}
+@media (max-width: 500px) {
+  .header-class nav a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+  }
 }
 .footer {
   width: 100%;
@@ -209,13 +249,32 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    border: none;
+    display: flex;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 0%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -227,9 +286,20 @@ nav a:hover {
 .home .bottom-container .here {
   margin-top: 20px;
 }
+@media (max-width: 500px) {
+  .home .bottom-container .here {
+    padding: 5px;
+    border-bottom: 2px dashed gray;
+  }
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -243,6 +313,11 @@ nav a:hover {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -252,9 +327,23 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+    margin-left: 35px;
+  }
+}
+.home .content-pick .destination h4 {
+  margin-left: 70px;
 }
 .home .content-pick .destination .btn {
   background-color: #0e7474;
@@ -268,7 +357,13 @@ nav a:hover {
   cursor: pointer;
   font-size: 17px;
 }
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    width: 80%;
+    margin-left: 35px;
+  }
+}
 .home .content-pick .destination .btn:hover {
-  background-color: orange;
+  background-color: #e0960c;
   color: white;
 }

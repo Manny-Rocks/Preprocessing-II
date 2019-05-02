@@ -5,17 +5,31 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile{
+      border:none;
+      display:flex;
+    
+    }
 
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width:100%;
+        margin-top: 20px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width:100%;
+        margin-top: 20px;
+        padding-left:0%;
+      }
 
       img {
         border-radius: 10px;
@@ -30,13 +44,23 @@
     }
     .here{
       margin-top:20px;
+      @media @mobile{
+        padding:5px;
+        border-bottom: 2px dashed gray;
+      }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+     
+     flex-direction: column-reverse;
 
+    
+
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -51,6 +75,10 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile{
+     width:100%;
+  
+     }
 
     img {
       border-radius: 10px;
@@ -62,13 +90,32 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile{
+      flex-direction:column;
+
+   
+      }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      
+      @media @mobile{
+        width:80%;
+        margin-left:35px;
+      }
+      h4{
+        margin-left:70px;
+      }
       .btn{
         .btn-maker(white,#0e7474);
         font-size:17px;
+        @media @mobile{
+          width:80%;
+          margin-left:35px;
+          
+       
+          }
         &:hover{
           background-color: @orange;
           color: white;
