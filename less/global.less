@@ -12,16 +12,23 @@ html, body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Indie Flower', cursive;
+  color:rgb(238, 55, 92);
 }
 
 h1 {
   font-size: 4rem;
+  color:@eastern-blue;
 }
 
 h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
 }
+h3 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+
 
 h4 {
   font-size: 2.5rem;
@@ -43,4 +50,9 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  @media @mobile {
+      background-color: white;
+      padding:10px;
+      max-width: 500px;
+  }
 }
